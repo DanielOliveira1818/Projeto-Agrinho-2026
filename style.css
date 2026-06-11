@@ -1,0 +1,409 @@
+/* ==========================================================================
+   PALETA DE CORES E VARIÁVEIS
+   ========================================================================== */
+   :root {
+    --verde-principal: #2E7D32;  /* Verde folha sustentável */
+    --verde-claro: #4CAF50;      /* Destaques e botões */
+    --verde-fundo: #E8F5E9;      /* Fundo leve para seções */
+    --terra-escuro: #3E2723;     /* Texto principal e contraste */
+    --branco: #FFFFFF;
+    --cinza-texto: #555555;
+    --transicao: all 0.3s ease;
+}
+
+/* ==========================================================================
+   ESTILOS GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--terra-escuro);
+    background-color: var(--branco);
+    line-height: 1.6;
+}
+
+a {
+    text-transform: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--verde-claro);
+    color: var(--branco);
+    border-radius: 30px;
+    font-weight: 600;
+    transition: var(--transicao);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--verde-principal);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================================
+   PARTE 1: MENU DE NAVEGAÇÃO
+   ========================================================================== */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--verde-principal);
+}
+
+.logo span {
+    color: var(--terra-escuro);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: var(--transicao);
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--verde-claro);
+}
+
+/* Menu Hambúrguer (Mobile) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--verde-principal);
+    transition: var(--transicao);
+}
+
+/* ==========================================================================
+   PARTE 2: PARTE DE DESTAQUE (HERO)
+   ========================================================================== */
+#destaque {
+    padding-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 80vh;
+}
+
+.destaque-conteudo {
+    flex: 1;
+}
+
+.destaque-conteudo h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--verde-principal);
+}
+
+.destaque-conteudo p {
+    font-size: 1.1rem;
+    color: var(--cinza-texto);
+    margin-bottom: 30px;
+}
+
+.destaque-imagem {
+    flex: 1;
+    text-align: right;
+}
+
+.destaque-imagem svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* ==========================================================================
+   PARTE 3: PARTE DE SERVIÇOS (PLANOS)
+   ========================================================================== */
+.fundo-servicos {
+    background-color: var(--verde-fundo);
+    width: 100%;
+}
+
+#servicos {
+    text-align: center;
+}
+
+.secao-titulo {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--terra-escuro);
+}
+
+.secao-subtitulo {
+    color: var(--cinza-texto);
+    margin-bottom: 50px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--branco);
+    padding: 40px 30px;
+    border-radius: 20px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 360px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    transition: var(--transicao);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(46, 125, 50, 0.1);
+}
+
+.card.popular {
+    border: 2px solid var(--verde-claro);
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background-color: var(--verde-claro);
+    color: var(--branco);
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.card-icone {
+    font-size: 2.5rem;
+    color: var(--verde-claro);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.preco {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--verde-principal);
+    margin-bottom: 20px;
+}
+
+.preco span {
+    font-size: 1rem;
+    color: var(--cinza-texto);
+    font-weight: 400;
+}
+
+.recursos {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.recursos li {
+    margin-bottom: 12px;
+    color: var(--cinza-texto);
+}
+
+.recursos li i {
+    color: var(--verde-claro);
+    margin-right: 10px;
+}
+
+/* ==========================================================================
+   PARTE 4: RODAPÉ COM REDES SOCIAIS
+   ========================================================================== */
+footer {
+    background-color: var(--terra-escuro);
+    color: var(--branco);
+    padding: 60px 20px 30px 20px;
+}
+
+.footer-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 40px;
+}
+
+.footer-info h2 {
+    color: var(--verde-claro);
+    margin-bottom: 10px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 20px;
+}
+
+.rede-link {
+    background-color: rgba(255,255,255,0.05);
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: var(--transicao);
+}
+
+.rede-link i {
+    font-size: 1.8rem;
+}
+
+.rede-link.instagram:hover {
+    background-color: #E1306C;
+    color: var(--branco);
+}
+
+.rede-link.whatsapp:hover {
+    background-color: #25D366;
+    color: var(--branco);
+}
+
+.rede-link div span {
+    display: block;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.rede-link div strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.direitos {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Responsividade)
+   ========================================================================== */
+@media (max-width: 968px) {
+    #destaque {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+        justify-content: center;
+    }
+
+    .destaque-imagem {
+        text-align: center;
+    }
+
+    .destaque-conteudo h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        right: -100%;
+        flex-direction: column;
+        background-color: var(--branco);
+        width: 100%;
+        text-align: center;
+        padding: 40px 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        transition: var(--transicao);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+    .redes-sociais {
+        flex-direction: column;
+        width: 100%;
+    }
+    .rede-link {
+        justify-content: center;
+    }
+}
