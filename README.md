@@ -1,3 +1,5 @@
+Projeto moonitorado pelo Professor GUilherme Amadeu, do COlégio Estadual HUmberto de Alencar Castelo Branco - Guairaçá, Núcleo de Paranavaí.
+
 Esse site foca na conversão de clientes para o agronegócio sustentável, com o objetivo de captar contatos para o consultor Daniel Oliveira. Estruturada em quatro partes, a página apresenta serviços, planos competitivos e links diretos para WhatsApp e Instagram, utilizando um design moderno e responsivo.
 
 1. Estrutura do Site (As 4 Partes)O site foi estruturado de forma estratégica para guiar o visitante até o contato final:
